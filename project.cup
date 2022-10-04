@@ -1,0 +1,121 @@
+package Project;
+
+import java_cup.runtime.*;
+
+import java.io.StringReader;
+import java.io.IOException;
+import java.io.FileInputStream;
+
+import java.util.LinkedList;
+
+parser code {:
+
+:}
+
+terminal DOT, COMMA;
+terminal Integer NUM;
+terminal String WORD;
+
+non terminal root;
+non terminal part;
+non terminal element;
+
+
+
+root 		::= part:p
+				{:
+					System.out.println("Success!");
+
+					// (4)
+
+					// En nuestra raiz tenemos la lista que construimos
+					// gracias a part
+					// Dentro de ella veriamos todos los elementos que agregamos
+
+					System.out.println("Desde nuestro parser: ");
+					System.out.println(p);
+
+					// Seguimos emitiendo esa lista
+					// La podriamos seguir usando desde Main.java
+
+					RESULT = p;
+				:}
+			;
+
+part 		::= part:p element:e
+				{:
+					// (3)
+
+					// Caso recursivo
+					// La lista ya existe, aqui solo quiero agregarle el elemento
+					// que recien encontre
+
+					((LinkedList)p).add(e);
+
+					// Luego emito esa misma lista
+
+					RESULT = p;
+
+
+					// Por que ((LinkedList)p).add() y no solo p.add() ?
+					// De nuevo lo mismo, esa lista fue emitida a traves de RESULT
+					// entonces Java reconoce p como un Object
+					// Gracias a esa type cast nosotros le decimos que la trate como
+					// una lista
+				:}
+			|	element:e
+				{:
+					// (2)
+
+					// Caso base
+					// Aqui creo la lista en la cual estare agregando elementos
+
+					LinkedList temp = new LinkedList();
+
+					// Me aseguro de agregar el elemento que acabo de encontrar
+
+					temp.add(e);
+
+					// Emito la lista como resultado
+
+					RESULT = temp;
+
+
+					// Por que solo LinkedList y no LinkedList<Tipo>?
+					// Los datos que voy emitiendo con RESULT son considerados Object
+					// LinkedList es lo mismo que decir LinkedList<Object>
+				:}
+			;
+
+
+
+element		::= WORD:w
+				{:
+					// (1)
+
+					// Imprimo "Word" en pantalla...
+
+					System.out.println("Word");
+
+					// ...y emito algo de informacion util
+					// El terminal WORD se declaro como String
+					// entonces aqui estoy entregando una cadena
+
+					RESULT = w;
+				:}
+			| 	NUM:n
+				{:
+					// (1)
+
+					// Imprimo "Num en pantalla...
+
+					System.out.println("Num");
+
+					// ...y emito algo de informacion util
+					// El terminal NUM se declaro como Integer
+					// entonces aqui estoy entregando un numero
+
+					RESULT = n;
+				:}
+			;
+

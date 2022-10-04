@@ -1,2 +1,5 @@
 # project-base
-Base para proyecto (Lexer + Parser)
+
+Base para el proyecto de Compiladores
+
+Lexer + Parser
