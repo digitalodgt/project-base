@@ -36,7 +36,8 @@ root 		::= part:p
 					System.out.println(p);
 
 					// Seguimos emitiendo esa lista
-					// La podriamos seguir usando desde Main.java
+					// La podriamos seguir usando desde el main
+					// (revisa el archivo Main.java)
 
 					RESULT = p;
 				:}
@@ -116,6 +117,18 @@ element		::= WORD:w
 					// entonces aqui estoy entregando un numero
 
 					RESULT = n;
+				:}
+			|	WORD:w COMMA NUM:n
+				{:
+					System.out.println("Pair");
+
+					// (6)
+
+					// Mi lista aguanta con todo
+					// Aqui le guardo un elemento de una clase personalizada
+					// (revisa el archivo Pair.java)
+
+					RESULT = new Pair(w, n);
 				:}
 			;
 

@@ -42,8 +42,6 @@ DIGIT = [0-9]
                         ); 
                     }
 
-/* Estos solo se declararon como terminal, sin tipo, por lo que no necesitan lexema */
-
 <YYINITIAL>{COMMA}  { return new Symbol( sym.COMMA ); }
 <YYINITIAL>{DOT}   	{ return new Symbol( sym.DOT );   }
 
