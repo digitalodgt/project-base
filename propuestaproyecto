@@ -1,0 +1,4 @@
+Propuesta proyecto
+Recibir un archivo con datos en el formato, obetnidos de la base de datos del colegio donde laboro:
+Apellido1 Apellido2, Nombre1 Nombre2, Direccion
+y aplicar un parser a los datos para poder identificar colonias para poder apoyar con la creaccion de las rutas de bus del colegio
