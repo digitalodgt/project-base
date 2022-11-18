@@ -12,19 +12,20 @@ parser code {:
 
 :}
 
-terminal DOT, COMMA;
-terminal Integer NUM;
+terminal DOT, COMMA, WHITE;
+terminal String DIST;
 terminal String WORD;
+terminal String STR_CONST;
+terminal KMS, CARRETERA, RESIDENCIALES;
 
 non terminal root;
 non terminal part;
 non terminal element;
-
-
+non terminal ubicacion;
 
 root 		::= part:p
 				{:
-					System.out.println("Success!");
+					//System.out.println("Success!");
 
 					// (4)
 
@@ -32,8 +33,8 @@ root 		::= part:p
 					// gracias a part
 					// Dentro de ella veriamos todos los elementos que agregamos
 
-					System.out.println("Desde nuestro parser: ");
-					System.out.println(p);
+					//System.out.println("Desde nuestro parser: ");
+					//System.out.println(p);
 
 					// Seguimos emitiendo esa lista
 					// La podriamos seguir usando desde el main
@@ -67,7 +68,6 @@ part 		::= part:p element:e
 			|	element:e
 				{:
 					// (2)
-
 					// Caso base
 					// Aqui creo la lista en la cual estare agregando elementos
 
@@ -90,45 +90,12 @@ part 		::= part:p element:e
 
 
 
-element		::= WORD:w
+element		::= 	STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 RESIDENCIALES STR_CONST:st3
 				{:
-					// (1)
-
-					// Imprimo "Word" en pantalla...
-
-					System.out.println("Word");
-
-					// ...y emito algo de informacion util
-					// El terminal WORD se declaro como String
-					// entonces aqui estoy entregando una cadena
-
-					RESULT = w;
+					RESULT = new Pair(st, st1+" "+st2+" "+st3);
 				:}
-			| 	NUM:n
+			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2
 				{:
-					// (1)
-
-					// Imprimo "Num en pantalla...
-
-					System.out.println("Num");
-
-					// ...y emito algo de informacion util
-					// El terminal NUM se declaro como Integer
-					// entonces aqui estoy entregando un numero
-
-					RESULT = n;
-				:}
-			|	WORD:w COMMA NUM:n
-				{:
-					System.out.println("Pair");
-
-					// (6)
-
-					// Mi lista aguanta con todo
-					// Aqui le guardo un elemento de una clase personalizada
-					// (revisa el archivo Pair.java)
-
-					RESULT = new Pair(w, n);
+					RESULT = new Pair(st, st1+" "+st2);
 				:}
 			;
-

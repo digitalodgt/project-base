@@ -8,41 +8,42 @@ import java_cup.runtime.Symbol;
 
 %state COMMENT
 %state STRING
+%state STRINGREST
 
 COMMA = ","
 DOT = "."
 WHITE = (" "|\t|\n|\r)
-
-ALPHA = [a-zA-Z]
+QUOT = "\""
+CHARS = [^{QUOT}]+
+ALPHA = [a-zA-Z0-9]
+ALL = +
 DIGIT = [0-9]
-
+DIST = {DIGIT}+{DOT}{DIGIT}
 %%
 
 
+<YYINITIAL>"Km"   		{ return new Symbol( sym.KMS );   		}
 
-<YYINITIAL>{DIGIT}+ { 
-                        // En el archivo .cup nuestro terminal NUM fue declarado como Integer
-                        // por lo tanto necesitamos un numero como lexema
+<YYINITIAL>"carretera a"   	{ return new Symbol( sym.CARRETERA );   	}
 
-                        return new Symbol(
-                            sym.NUM,
-                            Integer.parseInt(yytext())
-                        ); 
-                    }
+<YYINITIAL>"residenciales"	{ return new Symbol( sym.RESIDENCIALES ); 	}
 
+<YYINITIAL>";"			{ yybegin( STRINGREST );			}
 
-<YYINITIAL>{ALPHA}+ { 
-                        // En el archivo .cup nuestro terminal WORD fue declarado como String
-                        // por lo tanto necesitamos una cadena como lexema
-                        // yytext() de por si ya es una cadena
-                        
-                        return new Symbol( 
-                            sym.WORD, 
-                            yytext() 
-                        ); 
-                    }
+<STRINGREST>\n			{ yybegin( YYINITIAL );				}
 
-<YYINITIAL>{COMMA}  { return new Symbol( sym.COMMA ); }
-<YYINITIAL>{DOT}   	{ return new Symbol( sym.DOT );   }
+<STRINGREST>.			{						}
 
-<YYINITIAL>{WHITE}  	{  }
+<YYINITIAL> {DIST}  		{ return new Symbol( sym.DIST, yytext() ); 	}
+
+<YYINITIAL>{QUOT}		{ yybegin( STRING );				}
+
+<STRING>{CHARS}			{ return new Symbol( sym.STR_CONST, yytext() );	}
+
+<STRING>{QUOT}			{ yybegin( YYINITIAL);				}
+
+<YYINITIAL>{COMMA}  		{ return new Symbol( sym.COMMA ); 		}
+
+<YYINITIAL>{DOT}   		{ return new Symbol( sym.DOT );   		}
+
+<YYINITIAL>{WHITE}		{  }

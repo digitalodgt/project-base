@@ -9,18 +9,22 @@
 package Project;
 
 public class Pair {
-    String word;
-    int num;
+    String nomb;
+    String direc;
 
-    public Pair(String w, int n) {
-        this.word = w;
-        this.num = n;
+    public Pair(String w, String n) {
+        this.nomb = w;
+        this.direc = n;
     }
 
     // Es buena idea que les cree un metodo toString()
     // para poder visualizarlas facilmente en pantalla
 
     public String toString() {
-        return "Pair: <" + this.word + ", " + this.num + ">";
+        return "Pair: <" + this.nomb + ", " + this.direc + ">";
+    }
+    
+    public String getDir() {
+    	return this.direc;
     }
 }
