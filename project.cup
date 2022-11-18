@@ -12,16 +12,17 @@ parser code {:
 
 :}
 
-terminal DOT, COMMA, WHITE;
+terminal DOT, COMMA;
 terminal String DIST;
-terminal String WORD;
 terminal String STR_CONST;
-terminal KMS, CARRETERA, RESIDENCIALES;
+terminal KMS, CARRETERA, RESIDENCIALES, CONDOMINIO;
 
 non terminal root;
 non terminal part;
 non terminal element;
 non terminal ubicacion;
+
+precedence left STR_CONST;
 
 root 		::= part:p
 				{:
@@ -94,8 +95,20 @@ element		::= 	STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 RESIDE
 				{:
 					RESULT = new Pair(st, st1+" "+st2+" "+st3);
 				:}
+			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 CONDOMINIO STR_CONST:st3
+				{:
+					RESULT = new Pair(st, st1+" "+st2+" "+st3);
+				:}
 			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2
 				{:
 					RESULT = new Pair(st, st1+" "+st2);
+				:}
+			| STR_CONST:st COMMA STR_CONST:st1
+				{:
+					RESULT = new Pair(st,st1);
+				:}
+			| STR_CONST:st COMMA
+				{:
+					RESULT = new Pair(st,"No hay ruta");
 				:}
 			;

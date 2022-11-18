@@ -18,7 +18,7 @@ CHARS = [^{QUOT}]+
 ALPHA = [a-zA-Z0-9]
 ALL = +
 DIGIT = [0-9]
-DIST = {DIGIT}+{DOT}{DIGIT}
+DIST = {DIGIT}+{DOT}*{DIGIT}*
 %%
 
 
@@ -27,6 +27,8 @@ DIST = {DIGIT}+{DOT}{DIGIT}
 <YYINITIAL>"carretera a"   	{ return new Symbol( sym.CARRETERA );   	}
 
 <YYINITIAL>"residenciales"	{ return new Symbol( sym.RESIDENCIALES ); 	}
+
+<YYINITIAL>"condominio"		{ return new Symbol( sym.CONDOMINIO ); 	}
 
 <YYINITIAL>";"			{ yybegin( STRINGREST );			}
 
