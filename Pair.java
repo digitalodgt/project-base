@@ -21,7 +21,7 @@ public class Pair {
     // para poder visualizarlas facilmente en pantalla
 
     public String toString() {
-        return "Pair: <" + this.nomb + ", " + this.direc + ">";
+        return "\'" + this.nomb + ", " + this.direc + "\'"+"\n";
     }
     
     public String getDir() {

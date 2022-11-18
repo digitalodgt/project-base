@@ -1,35 +1,6 @@
-;"Alisson Daniela Bracamonte Martinez",Km. 26.5 carretera a "Santa Elena Barillas"; entrada a Finca Hacienda Real
-;"Maria Fernanda Hernandez Alvizures",Km. 16.5 carretera a "El Salvador" residenciales "Bosques de Arrazola"; casa 12D
-;"Stefanie Susana Morales Paz",Km. 19.5 carretera a "San Jose Pinula" residenciales "Los Pinabetes"; condominio Abetos 22
-;"Giancarlo Andree Chavarria Ramos",Km. 16.5 carretera a "Pavon" condominio "Terravista"
-;"Asher Guillermo Andres Morales Garcia",Km. 19.3 carretera a "San Jose Pinula" residenciales "Manantiales"
-;"Lisa Jhovana Giron Figueroa",Km. 16.5 carretera a "Fraijanes" residenciales "Campo Grande"
-;"Marco Dionisio Castro Morales",Km. 38 carretera a "El Salvador"; Barrio EL Pumpo, Pueblo Nuevo Viñas
-;"Jefry Eduardo Escobar Maradiaga",Km. 24.6 carretera a "San Jose Pinula" condominio "San Jose de las Fuentes II"
-;"Alexa Mileydis Salazar Santos",Km. 16.5 carretera a "Fraijanes" residenciales "Terravista"; Lote 26 manzana I sector 3
-;"Jeshua Ruben Chavarria Ramos",Km. 16.5 carretera a "Pavon" residenciales "Terravista"
-;"Luis Pablo Giron Figueroa",Km. 16.5 carretera a "Fraijanes" residenciales "Campo Grande"
-;"Rubi Marisol Morales Contreras",Km. 38 carretera a "El Salvador"; Barrio el Pumpo, Pueblo Nuevo Viñas
-;"Camila Escalante Lopez",Km. 25.5 carretera a "El Salvador" residenciales "Fontena II"
-;"Clarissa Veronica Pineda Lemus",Km. 25.5 carretera a "El Salvador" residenciales "Fontena II"; casa 126"
-;"Julio Daniel Tebalan Hernandez",Km. 21.5 carratera a "El Salvador" residenciales "Cumbres de la Arboleda"
-;"Ana Ruth Sarai Renoj Gonzales",Km. 22.3 carretera a "San Jose Pinula" residenciales "Geranios 2"
-;"Javier Andrade Dominguez",Km. 16.5 carretera a "El Salvador" residenciales "Entrecampos"
-;"Nicole Andrade Dominguez",Km. 16.5 carretera a "El Salvador" residenciales "Entrecampos"
-;"Sergio Andre Ortiz Becerra",;46 av. 'A' 5-21 Zona 2 Mixco Molino de las flores II
-;"Jennifer Josselin Zacarias Ramirez",Km. 26.2 carretera a "San Jose Pinula" residenciales "Vistas de Montecristo"; casa 1A
-;"David Ernesto Morales Paz",Km. 19.5 carretera a "San Jose Pinula" residenciales "Los Pinabetes"; condominio Abetos 22
-;"Ariel Emilio Almendarez Marroquin",Km. 25.5 carretera a "San Jose Pinula" residenciales "Valle de los Sauces"
-;"Elisaul Jeremias Hernandez Vera",;Zona 7 de Mixco Club Residenciales Parque 7
-;"Zoe Alexandra Yaque Rosales",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"
-;"Jorge Sebastian Del Cid Sanchez",Km. 16.5 carretera a "El Salvador" residenciales "San Antonio"; lote 125 casa 1
-;"Kevin Santiago Lemus del Cid",Km. 16.5 carretera a "El Salvador" residenciales "San Antonio"; lote 125 casa 1
-;"Ariana Sarai Rojas Rosa",Km. 29.1 carretera a "El Salvador" residenciales "San Lorenzo de Almego"
-;"Marelyn Valeska Barillas Mejia",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"
-;"Luna Sofia Rengifo Solarte",Km. 19.5 carretera a "Pavon" residenciales "Jardines de Arrazola"
-;"Laura Valentina Oicata Solarte",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"; casa 5
-;"Pablo Esteban Oicata Solarte",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"
-;"Kaithlyn Camila Padilla Rosales",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo
-;"Dominic Ricardo Andre Yaque Rosales",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo
-;"Alisson Valentina Padilla Rosales",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"
-;"Genesis Mackenzie Yaque Rosales",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo
+"Alisson Daniela Bracamonte Martinez",Km. 26.5 carretera a "Santa Elena Barillas"; entrada a Finca Hacienda Real
+"Maria Fernanda Hernandez Alvizures",Km. 16.5 carretera a "El Salvador" residenciales "Bosques de Arrazola"; casa 12D
+"Stefanie Susana Morales Paz",Km. 19.5 carretera a "San Jose Pinula" residenciales "Los Pinabetes"; condominio Abetos 22
+"Giancarlo Andree Chavarria Ramos",Km. 16.5 carretera a "Pavon" condominio "Terravista"
+"Asher Guillermo Andres Morales Garcia",Km. 19.3 carretera a "San Jose Pinula" residenciales "Manantiales"
+"Lisa Jhovana Giron Figueroa",Km. 6.5 carretera a "Fraijanes" residenciales "Campo Grande"
