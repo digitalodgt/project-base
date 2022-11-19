@@ -14,15 +14,14 @@ parser code {:
 
 terminal DOT, COMMA;
 terminal String DIST;
-terminal String STR_CONST;
+terminal String STR_CONST, STR_CONST2;
 terminal KMS, CARRETERA, RESIDENCIALES, CONDOMINIO;
 
 non terminal root;
 non terminal part;
 non terminal element;
-non terminal ubicacion;
 
-precedence left STR_CONST;
+precedence left STR_CONST, STR_CONST2;
 
 root 		::= part:p
 				{:
@@ -91,11 +90,27 @@ part 		::= part:p element:e
 
 
 
-element		::= 	STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 RESIDENCIALES STR_CONST:st3
+element		::= 	STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 RESIDENCIALES STR_CONST:st3 STR_CONST2:st4
+				{:
+					RESULT = new Pair(st, st1+" "+st2+" "+st3+" "+st4.trim());
+				:}
+			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 CONDOMINIO STR_CONST:st3 STR_CONST2:st4
+				{:
+					RESULT = new Pair(st, st1+" "+st2+" "+st3+" "+st4.trim());
+				:}
+			|STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 RESIDENCIALES STR_CONST:st3
 				{:
 					RESULT = new Pair(st, st1+" "+st2+" "+st3);
 				:}
 			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 CONDOMINIO STR_CONST:st3
+				{:
+					RESULT = new Pair(st, st1+" "+st2+" "+st3);
+				:}
+			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 STR_CONST2:st3
+				{:
+					RESULT = new Pair(st, st1+" "+st2+" "+st3);
+				:}
+			| STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 STR_CONST:st3
 				{:
 					RESULT = new Pair(st, st1+" "+st2+" "+st3);
 				:}
@@ -106,6 +121,10 @@ element		::= 	STR_CONST:st COMMA KMS DOT DIST:st1 CARRETERA STR_CONST:st2 RESIDE
 			| STR_CONST:st COMMA STR_CONST:st1
 				{:
 					RESULT = new Pair(st,st1);
+				:}
+			| STR_CONST:st COMMA STR_CONST2
+				{:
+					RESULT = new Pair(st,"00.0");
 				:}
 			| STR_CONST:st COMMA
 				{:

@@ -54,9 +54,9 @@ class Yylex implements java_cup.runtime.Scanner {
 	private final int STRINGREST = 3;
 	private final int yy_state_dtrans[] = {
 		0,
-		44,
-		45,
-		46
+		48,
+		49,
+		50
 	};
 	private void yybegin (int state) {
 		yy_lexical_state = state;
@@ -213,17 +213,17 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 13 */ YY_NO_ANCHOR,
 		/* 14 */ YY_NO_ANCHOR,
 		/* 15 */ YY_NO_ANCHOR,
-		/* 16 */ YY_NOT_ACCEPT,
+		/* 16 */ YY_NO_ANCHOR,
 		/* 17 */ YY_NO_ANCHOR,
-		/* 18 */ YY_NOT_ACCEPT,
-		/* 19 */ YY_NOT_ACCEPT,
+		/* 18 */ YY_NO_ANCHOR,
+		/* 19 */ YY_NO_ANCHOR,
 		/* 20 */ YY_NOT_ACCEPT,
-		/* 21 */ YY_NOT_ACCEPT,
-		/* 22 */ YY_NOT_ACCEPT,
+		/* 21 */ YY_NO_ANCHOR,
+		/* 22 */ YY_NO_ANCHOR,
 		/* 23 */ YY_NOT_ACCEPT,
-		/* 24 */ YY_NOT_ACCEPT,
+		/* 24 */ YY_NO_ANCHOR,
 		/* 25 */ YY_NOT_ACCEPT,
-		/* 26 */ YY_NOT_ACCEPT,
+		/* 26 */ YY_NO_ANCHOR,
 		/* 27 */ YY_NOT_ACCEPT,
 		/* 28 */ YY_NOT_ACCEPT,
 		/* 29 */ YY_NOT_ACCEPT,
@@ -244,27 +244,32 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 44 */ YY_NOT_ACCEPT,
 		/* 45 */ YY_NOT_ACCEPT,
 		/* 46 */ YY_NOT_ACCEPT,
-		/* 47 */ YY_NO_ANCHOR,
+		/* 47 */ YY_NOT_ACCEPT,
 		/* 48 */ YY_NOT_ACCEPT,
 		/* 49 */ YY_NOT_ACCEPT,
 		/* 50 */ YY_NOT_ACCEPT,
-		/* 51 */ YY_NOT_ACCEPT
+		/* 51 */ YY_NO_ANCHOR,
+		/* 52 */ YY_NOT_ACCEPT,
+		/* 53 */ YY_NOT_ACCEPT,
+		/* 54 */ YY_NOT_ACCEPT,
+		/* 55 */ YY_NOT_ACCEPT
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"17:9,23,16,17:2,21,17:18,8,17,20,17:9,22,17,19,17,18:10,17,15,17:15,1,17:21" +
-",4,17,3,11,6,17:3,10,17:2,13,2,12,14,17:2,5,9,7,17:11,0:2")[0];
+"22:9,24,23,22:2,16,22:18,8,22,19,21,22:8,20,22,18,22,17:10,22,15,22:15,1,22" +
+":21,4,22,3,11,6,22:3,10,22:2,13,2,12,14,22:2,5,9,7,22:11,0:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,52,
-"0,1:3,2,1:7,3,1:3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24," +
-"25,26,27,28,29,30,31,32,33,34,35,36,37,38,39")[0];
+	private int yy_rmap[] = unpackFromString(1,56,
+"0,1,2,1:2,3,1:10,4,1,5,1,6,1,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,2" +
+"3,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40")[0];
 
-	private int yy_nxt[][] = unpackFromString(40,24,
-"1,16,-1,18,-1,19,-1:2,2,-1:6,3,2,-1,4,5,6,2,7,2,-1:42,4,47,-1:5,12:19,-1,12" +
-":3,-1:2,8,-1:39,17,-1:9,20,-1:9,21,-1:15,22,-1:22,48,-1:30,23,-1:20,24,-1:2" +
-"5,26,-1:22,27,-1:19,28,-1:31,29,-1:20,30,-1:19,31,-1:18,32,-1:27,33,-1:23,5" +
-"1,-1:27,49,-1:25,34,-1:14,50,-1:24,37,-1:29,38,-1:21,40,-1:29,9,-1:13,41,-1" +
-":23,10,-1:32,42,-1:16,43,-1:26,11,-1:14,1,-1:23,1,12:19,13,12:3,1,14:15,15," +
-"14:4,-1,14:2,-1:18,17,47,-1:9,25,-1:30,36,-1:21,39,-1:18,35,-1:18");
+	private int yy_nxt[][] = unpackFromString(41,25,
+"1,2,21,24,21,26,21:2,3,21:6,4,3,5,6,7,8,9,21,3:2,-1:27,10,-1:39,5,51,-1:7,1" +
+"6:18,-1,16:5,-1,18:14,-1,18:9,-1:5,52,-1:36,22,-1:19,27,-1:16,20,-1:9,23,-1" +
+":19,28,-1:21,25,-1:29,30,-1:23,31,-1:20,32,-1:32,33,-1:21,34,-1:20,35,-1:19" +
+",36,-1:28,37,-1:24,55,-1:28,53,-1:26,38,-1:15,54,-1:25,41,-1:30,42,-1:22,44" +
+",-1:30,11,-1:14,45,-1:24,12,-1:33,46,-1:17,47,-1:27,13,-1:15,1,14:15,-1,14:" +
+"6,15,14,1,16:18,17,16:5,1,18:14,19,18:9,-1:17,22,51,-1:11,29,-1:31,40,-1:22" +
+",43,-1:19,39,-1:19");
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -315,68 +320,96 @@ class Yylex implements java_cup.runtime.Scanner {
 					case -2:
 						break;
 					case 2:
-						{  }
+						{ System.out.println("Found: " + yytext()); 	}
 					case -3:
 						break;
 					case 3:
-						{ yybegin( STRINGREST );			}
+						{  						}
 					case -4:
 						break;
 					case 4:
-						{ return new Symbol( sym.DIST, yytext() ); 	}
+						{ yybegin( STRINGREST );			}
 					case -5:
 						break;
 					case 5:
-						{ return new Symbol( sym.DOT );   		}
+						{ return new Symbol( sym.DIST, yytext() ); 	}
 					case -6:
 						break;
 					case 6:
-						{ yybegin( STRING );				}
+						{ return new Symbol( sym.DOT );   		}
 					case -7:
 						break;
 					case 7:
-						{ return new Symbol( sym.COMMA ); 		}
+						{ yybegin( STRING );				}
 					case -8:
 						break;
 					case 8:
-						{ return new Symbol( sym.KMS );   		}
+						{ return new Symbol( sym.COMMA ); 		}
 					case -9:
 						break;
 					case 9:
-						{ return new Symbol( sym.CONDOMINIO ); 	}
+						{ yybegin( COMMENT );				}
 					case -10:
 						break;
 					case 10:
-						{ return new Symbol( sym.CARRETERA );   	}
+						{ return new Symbol( sym.KMS );   		}
 					case -11:
 						break;
 					case 11:
-						{ return new Symbol( sym.RESIDENCIALES ); 	}
+						{ return new Symbol( sym.CONDOMINIO ); 		}
 					case -12:
 						break;
 					case 12:
-						{ return new Symbol( sym.STR_CONST, yytext() );	}
+						{ return new Symbol( sym.CARRETERA );   	}
 					case -13:
 						break;
 					case 13:
-						{ yybegin( YYINITIAL);				}
+						{ return new Symbol( sym.RESIDENCIALES ); 	}
 					case -14:
 						break;
 					case 14:
-						{						}
+						{ 						}
 					case -15:
 						break;
 					case 15:
 						{ yybegin( YYINITIAL );				}
 					case -16:
 						break;
-					case 17:
-						{ return new Symbol( sym.DIST, yytext() ); 	}
+					case 16:
+						{ return new Symbol( sym.STR_CONST, yytext() );	}
 					case -17:
 						break;
-					case 47:
-						{ return new Symbol( sym.DIST, yytext() ); 	}
+					case 17:
+						{ yybegin( YYINITIAL);				}
 					case -18:
+						break;
+					case 18:
+						{ return new Symbol( sym.STR_CONST2, yytext() );}
+					case -19:
+						break;
+					case 19:
+						{ yybegin( YYINITIAL );				}
+					case -20:
+						break;
+					case 21:
+						{ System.out.println("Found: " + yytext()); 	}
+					case -21:
+						break;
+					case 22:
+						{ return new Symbol( sym.DIST, yytext() ); 	}
+					case -22:
+						break;
+					case 24:
+						{ System.out.println("Found: " + yytext()); 	}
+					case -23:
+						break;
+					case 26:
+						{ System.out.println("Found: " + yytext()); 	}
+					case -24:
+						break;
+					case 51:
+						{ return new Symbol( sym.DIST, yytext() ); 	}
+					case -25:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);

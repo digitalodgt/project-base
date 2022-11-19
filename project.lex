@@ -12,6 +12,8 @@ import java_cup.runtime.Symbol;
 
 COMMA = ","
 DOT = "."
+SEMI = ";"
+COMS = [^{SEMI}]+
 WHITE = (" "|\t|\n|\r)
 QUOT = "\""
 CHARS = [^{QUOT}]+
@@ -28,13 +30,13 @@ DIST = {DIGIT}+{DOT}*{DIGIT}*
 
 <YYINITIAL>"residenciales"	{ return new Symbol( sym.RESIDENCIALES ); 	}
 
-<YYINITIAL>"condominio"		{ return new Symbol( sym.CONDOMINIO ); 	}
+<YYINITIAL>"condominio"		{ return new Symbol( sym.CONDOMINIO ); 		}
 
-<YYINITIAL>";"			{ yybegin( STRINGREST );			}
+<YYINITIAL>{SEMI}		{ yybegin( STRINGREST );			}
 
-<STRINGREST>\n			{ yybegin( YYINITIAL );				}
+<STRINGREST>{COMS}		{ return new Symbol( sym.STR_CONST2, yytext() );}
 
-<STRINGREST>.			{						}
+<STRINGREST>{SEMI}		{ yybegin( YYINITIAL );				}
 
 <YYINITIAL> {DIST}  		{ return new Symbol( sym.DIST, yytext() ); 	}
 
@@ -48,4 +50,12 @@ DIST = {DIGIT}+{DOT}*{DIGIT}*
 
 <YYINITIAL>{DOT}   		{ return new Symbol( sym.DOT );   		}
 
-<YYINITIAL>{WHITE}		{  }
+<YYINITIAL>"#"			{ yybegin( COMMENT );				}
+
+<COMMENT>.		    	{ 						}
+
+<COMMENT>\n		    	{ yybegin( YYINITIAL );				}
+
+<YYINITIAL>{WHITE}		{  						}
+
+<YYINITIAL>.        		{ System.out.println("Found: " + yytext()); 	}

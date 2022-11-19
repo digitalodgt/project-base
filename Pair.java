@@ -21,10 +21,14 @@ public class Pair {
     // para poder visualizarlas facilmente en pantalla
 
     public String toString() {
-        return "\'" + this.nomb + ", " + this.direc + "\'"+"\n";
+        return "Alumno(a): " + String.format("%-40s",this.nomb) + "Direccion: Km. " + this.direc + "."+"\n";
     }
     
     public String getDir() {
     	return this.direc;
+    }
+    
+    public String getNomb() {
+    	return "Alumno(a): " + this.nomb;
     }
 }
