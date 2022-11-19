@@ -36,7 +36,6 @@ class Categories {
 		ruta2 = true;
 	}
 	
-	System.out.println(ruta1);
         Double kms = new Double(input.getDir().substring(0,4).trim());
         
         if (kms >= 18.5 & ruta1) {

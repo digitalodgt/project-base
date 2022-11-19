@@ -1,6 +1,8 @@
-"Alisson Daniela Bracamonte Martinez",Km. 26.5 carretera a "Santa Elena Barillas"; entrada a Finca Hacienda Real
-"Maria Fernanda Hernandez Alvizures",Km. 16.5 carretera a "El Salvador" residenciales "Bosques de Arrazola"; casa 12D
-"Stefanie Susana Morales Paz",Km. 19.5 carretera a "San Jose Pinula" residenciales "Los Pinabetes"; condominio Abetos 22
-"Giancarlo Andree Chavarria Ramos",Km. 16.5 carretera a "Pavon" condominio "Terravista"
-"Asher Guillermo Andres Morales Garcia",Km. 19.3 carretera a "San Jose Pinula" residenciales "Manantiales"
-"Lisa Jhovana Giron Figueroa",Km. 6.5 carretera a "Fraijanes" residenciales "Campo Grande"
+"Anthony Zaid Samayoa",Km. 21.1 carretera a "Lo de Dieguez" residenciales "Arrazola Country Club"
+"Oscar Isai Ixpanel Gonzalez",Km. 16.5 carretera a "El Salvador" residenciales "Los Diamantes"; lote 30 Seccion D
+"Jonathan Adrian Medina Marroquin",Km. 22.5 carretera a "El Salvador" residenciales "Villa Capelo"; casa 32T
+"Valerie Sophia Medina Marroquin",Km. 22.5 carretera a "El Salvador" residenciales "Villa Capelo"; casa 32T
+"German Francisco Perez Tejeda",Km. 21.5 carretera a "Fraijanes" residenciales "Bosque Escondido"; sector Cosuarinas casa 26
+"Marjorie Anaisa Belteton Calderon",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"
+"Cristian Aroldo Belteton Calderon",Km. 30.5 carretera a "El Salvador" residenciales "Alamedas de Santo Domingo"
+"Nadia Yoalzine Vasquez Con",Km. 14.5 carretera a "Piedra Parada" "Aldea El Pajon"; lote 266 A
